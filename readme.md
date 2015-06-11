@@ -4,6 +4,10 @@
 
 Made with my mentor at [Bloc](http://bloc.io)
 
+The app name is jefflobacz-bloccit
+
+It can be found at jefflobacz-bloccit.herokuapp.com
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
