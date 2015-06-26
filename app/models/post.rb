@@ -1,9 +1,9 @@
 class Post < ActiveRecord::Base
   has_many :comments
 
-  def result2
+  def result
     Post.create(title: "First Post")
-    post2 = Post.first
-    post2
+    post = Post.first
+    post
   end
 end
