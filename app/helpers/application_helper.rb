@@ -6,7 +6,7 @@ module ApplicationHelper
   def result
     Post.create(title: "First Post", body: "This is the first post in our system")
     post = Post.first
-    p post
+    post
   end
 
 end
