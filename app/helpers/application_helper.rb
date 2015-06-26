@@ -3,10 +3,4 @@ module ApplicationHelper
     p "Jeff J. Lobacz"
   end
 
-  def result
-    Post.create(title: "First Post")
-    post = Post.first
-    post
-  end
-
 end
