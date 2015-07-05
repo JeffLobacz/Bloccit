@@ -4,10 +4,15 @@ source 'https://rubygems.org'
 gem 'bootstrap-sass'
 # pry-rails gem added by Jeff Lobacz
 gem 'pry-rails'
+# faker gem added by Jeff Lobacz
+gem 'faker'
+# devise gem added by Jeff Lobacz
+gem 'devise'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
 # Use sqlite3 as the database for Active Record
+
 group :production do
   gem 'pg'
   gem 'rails_12factor'
@@ -16,6 +21,7 @@ end
 group :development do
   gem 'sqlite3'
 end
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -27,8 +33,7 @@ gem 'coffee-rails', '~> 4.1.0'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
-# faker gem added by Jeff Lobacz
-gem 'faker'
+
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
