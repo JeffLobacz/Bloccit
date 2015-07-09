@@ -8,6 +8,8 @@ gem 'pry-rails'
 gem 'faker'
 # devise gem added by Jeff Lobacz
 gem 'devise'
+# Figaro gem added by Jeff Lobacz
+gem 'figaro', '1.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
