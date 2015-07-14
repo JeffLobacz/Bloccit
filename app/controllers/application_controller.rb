@@ -4,9 +4,6 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :configure_permitted_parameters, if: :devise_controller?
 
-  # The following 5 lines satisfies the 3rd and 4th bullet points in the assignment:
-  # "Move the flash_attack filter to ApplicationController"
-
   before_action :flash_attack
 
   def flash_attack
