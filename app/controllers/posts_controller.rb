@@ -14,8 +14,8 @@ class PostsController < ApplicationController
 
   def create
     @topic = Topic.find(params[:topic_id])
-    @post = Post.new(params.require(:post).permit(:title, :body))
-    @post.user = current_user
+    @post = current_user.posts.build(params.require(:post).permit(:title, :body))
+    @post.topic = @topic
     authorize @post
     if @post.save
       flash[:notice] = "Post was saved."
