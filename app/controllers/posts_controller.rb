@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
   def index
-    @posts = Post.all
+    @posts = Post.all.ordered_by_reverse_created_at
   end
 
   def show
