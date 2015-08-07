@@ -5,6 +5,11 @@
     <div class="media-body">
       <h4 class="media-heading">
         <%= link_to question.title, question %>
+        <% if question.resolved %>
+          <span class="label label-success">Resolved</span>
+        <% else %>
+          <span class="label label-warning">Unresolved</span>
+        <% end %>
       </h4>
     </div>
   </div>

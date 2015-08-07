@@ -1,6 +1,6 @@
 class QuestionsController < ApplicationController
   def index
-    @questions = Question.all
+    @questions = Question.all.ordered_by_reverse_created_at
   end
 
   def show
@@ -37,3 +37,4 @@ class QuestionsController < ApplicationController
     end
   end
 end
+

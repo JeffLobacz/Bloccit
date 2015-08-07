@@ -33,7 +33,9 @@ ActiveRecord::Schema.define(version: 20150804072429) do
     t.string   "title"
     t.text     "body"
     t.boolean  "resolved"
+    t.integer  "offer"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
 end
