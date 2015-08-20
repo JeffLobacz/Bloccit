@@ -6,4 +6,11 @@ module ApplicationHelper
       content_tag :div, capture(&block), class: 'form-group'
     end
   end
+
+  def markdown_to_html(markdown)
+    renderer = Redcarpet::Render::HTML.new
+    extentions = {fenced_code_blocks: true}
+    redcarpet = Redcarpet::Markdown.new(renderer, extentions)
+    (redcarpet.render markdown).html_safe
+  end
 end

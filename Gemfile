@@ -14,6 +14,9 @@ gem 'figaro', '1.0'
 # pundit gem added by Jeff Lobacz
 gem 'pundit'
 
+# redcarpet gem added by Jeff Lobacz
+gem 'redcarpet'
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
