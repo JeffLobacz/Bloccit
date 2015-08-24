@@ -17,6 +17,11 @@ gem 'pundit'
 # redcarpet gem added by Jeff Lobacz
 gem 'redcarpet'
 
+# The following three gems added by Jeff Lobacz
+gem 'carrierwave'
+gem 'mini_magick'
+gem 'fog'
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.1'
