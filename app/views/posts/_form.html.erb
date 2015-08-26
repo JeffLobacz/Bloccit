@@ -20,6 +20,7 @@
   <!-- The following 5 lines of code were written by Jeff -->
   <%= form_group_tag(post.errors[:image]) do %>
     <%= f.label :image %>
+    <%= image_tag( post.image.small.url ) %>
     <%= f.file_field :image %>
     <%= f.hidden_field :image_cache %>
   <% end %>
