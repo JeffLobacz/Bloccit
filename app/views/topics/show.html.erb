@@ -11,6 +11,8 @@
       <div class="media">
         <div class="media-body">
           <h4 class="media-heading">
+            <!-- The following line was created by Jeff -->
+            <%= image_tag(post.image.tiny.url, class: "post-image") if post.image? %>
             <%= link_to (markdown_to_html post.title), [@topic, post] %>
           </h4>
           <small>
