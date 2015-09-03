@@ -16,5 +16,15 @@
   </div>
 </div>
 
+<div class="row">
+    <h2> Comments </h2>
+    <div>
+        <%= render partial: 'comments/comment', collection: @comments %>
+    </div>
+
+    <div>
+        <%= render 'comments/form' %>
+    </div>
+</div>
 
 <!-- <p><%= @post.body %></p> -->
