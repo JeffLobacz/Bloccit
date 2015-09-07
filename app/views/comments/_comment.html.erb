@@ -1,3 +1,7 @@
 <p>
-  <%= comment.body %>
+  <% if comment.user %>
+    <%= image_tag(comment.user.avatar.tiny.url) if comment.user.avatar? %><%= comment.user.name %>: <%= comment.body %>
+      <% else %>
+        Unknown User: <%= comment.body %>
+  <% end %>
 </p>
