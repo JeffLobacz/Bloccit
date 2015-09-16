@@ -1,4 +1,6 @@
 class TopicsController < ApplicationController
+  before_action :set_topic, only: [:show, :edit, :update, :destroy]
+
   def index
     @topics = Topic.ordered_by_reverse_created_at.paginate(page: params[:page], per_page: 10)
     authorize @topics
@@ -10,13 +12,11 @@ class TopicsController < ApplicationController
   end
 
   def show
-    @topic = Topic.find(params[:id])
     @posts = @topic.posts.paginate(page: params[:page], per_page: 10)
     authorize @topic
   end
 
   def edit
-    @topic = Topic.find(params[:id])
     authorize @topic
   end
 
@@ -32,7 +32,6 @@ class TopicsController < ApplicationController
   end
 
   def update
-    @topic = Topic.find(params[:id])
     authorize @topic
     if @topic.update_attributes(topic_params)
       redirect_to @topic
@@ -42,7 +41,23 @@ class TopicsController < ApplicationController
     end
   end
 
+  def destroy
+    authorize @topic
+    if @topic.destroy
+      flash[:notice] = "\"#{@topic.name}\" was deleted successfully."
+      redirect_to topics_path
+    else
+      flash[:error] = "There was an error deleting the topic."
+      render :show
+    end
+  end
+
+
   private
+
+  def set_topic
+    @topic = Topic.find(params[:id])
+  end
 
   def topic_params
     params.require(:topic).permit(:name, :description, :public)
