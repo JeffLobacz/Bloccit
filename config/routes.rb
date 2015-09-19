@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   get 'summaries/index'
 
+  get 'welcome/faq'
+
   devise_for :users
   resources :users, only: [:update]
 
