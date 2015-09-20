@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :newposts
+
   get 'comments/new'
 
   get 'summaries/index'
